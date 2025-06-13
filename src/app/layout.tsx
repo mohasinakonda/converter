@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import SideNav from "@/components/SideNav";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -31,10 +32,11 @@ export default function RootLayout({
 	const pathname = usePathname();
 
 	return (
-		<html lang="en">
+		<html lang="en" className="dark" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-gray-900 `}
 			>
+				{/* <ThemeProvider> */}
 				<Header />
 				<SideNav />
 				{/* <AnimatePresence mode="wait" initial={false}> */}
@@ -46,6 +48,7 @@ export default function RootLayout({
 				</motion.div>
 				{/* </AnimatePresence> */}
 				<Footer />
+				{/* </ThemeProvider> */}
 			</body>
 		</html>
 	);
