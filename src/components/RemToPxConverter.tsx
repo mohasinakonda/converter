@@ -10,7 +10,7 @@ import {
 
 const RemToPxConverter = () => {
 	const [value, setValue] = useState("");
-	const [isRemToPx, setIsRemToPx] = useState(true);
+	const [isRemToPx, setIsRemToPx] = useState(false);
 	const [copied, setCopied] = useState(false);
 
 	const baseRemSize = 16; // Default browser REM size
@@ -63,11 +63,10 @@ const RemToPxConverter = () => {
 					<InformationCircleIcon className="w-5 h-5 text-blue-500 mt-0.5" />
 					<div className="text-sm text-blue-700 dark:text-blue-300">
 						<p className="mb-2">
-							REM (Root EM) is relative to the root element's font size. By default, 1rem equals 16px in most browsers.
+							REM (Root EM) is relative to the root element&apos;s font size. By
+							default, 1rem equals 16px in most browsers.
 						</p>
-						<p>
-							Formula: 1rem = 16px (default)
-						</p>
+						<p>Formula: 1rem = 16px (default)</p>
 					</div>
 				</div>
 			</div>
@@ -81,7 +80,7 @@ const RemToPxConverter = () => {
 						type="number"
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
-						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 text-gray-700 dark:border-gray-600 dark:text-white"
 						placeholder={`Enter ${isRemToPx ? "REM" : "PX"} value`}
 						step={isRemToPx ? "0.1" : "1"}
 					/>
@@ -96,7 +95,7 @@ const RemToPxConverter = () => {
 							type="text"
 							readOnly
 							value={calculate()}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+							className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 text-gray-700 dark:text-white"
 						/>
 						<motion.button
 							whileHover={{ scale: 1.05 }}

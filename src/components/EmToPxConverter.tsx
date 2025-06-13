@@ -63,11 +63,11 @@ const EmToPxConverter = () => {
 					<InformationCircleIcon className="w-5 h-5 text-blue-500 mt-0.5" />
 					<div className="text-sm text-blue-700 dark:text-blue-300">
 						<p className="mb-2">
-							EM units are relative to the font size of their parent element. If the parent element's font size is 16px, then 1em equals 16px for the child element.
+							EM units are relative to the font size of their parent element. If
+							the parent element&apos;s font size is 16px, then 1em equals 16px
+							for the child element.
 						</p>
-						<p>
-							Formula: 1em = parent font size (default: 16px)
-						</p>
+						<p>Formula: 1em = parent font size (default: 16px)</p>
 					</div>
 				</div>
 			</div>
@@ -81,7 +81,7 @@ const EmToPxConverter = () => {
 						type="number"
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
-						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 text-gray-700 dark:border-gray-600 dark:text-white"
 						placeholder={`Enter ${isEmToPx ? "EM" : "PX"} value`}
 						step={isEmToPx ? "0.1" : "1"}
 					/>
@@ -96,7 +96,7 @@ const EmToPxConverter = () => {
 							type="text"
 							readOnly
 							value={calculate()}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+							className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white text-gray-700"
 						/>
 						<motion.button
 							whileHover={{ scale: 1.05 }}

@@ -12,11 +12,11 @@ const SideNav = () => {
 		{ name: "QR Code Reader", href: "/qr-code-reader" },
 		{ name: "QR Code Generator", href: "/qr-code-generator" },
 		{ name: "JSON Beautifier", href: "/json-beautifier" },
-		{ name: "VW to PX", href: "/vw-to-px" },
-		{ name: "Percentage to PX", href: "/percentage-to-px" },
-		{ name: "REM to PX", href: "/rem-to-px" },
-		{ name: "EM to PX", href: "/em-to-px" },
 		{ name: "URL Encoder/Decoder", href: "/url-converter" },
+		{ name: "PX to VW", href: "/px-to-vw" },
+		{ name: "PX to REM", href: "/px-to-rem" },
+		{ name: "PX to EM", href: "/px-to-em" },
+		{ name: "Percentage to PX", href: "/percentage-to-px" },
 
 		{ name: "Barcode Reader", href: "/barcode-reader" },
 	];
