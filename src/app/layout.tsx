@@ -6,8 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SideNav from "@/components/SideNav";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { ThemeProvider } from "next-themes";
+import { motion } from "framer-motion";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -37,7 +36,6 @@ export default function RootLayout({
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased dark:bg-gray-900 `}
 			>
-				{/* <ThemeProvider> */}
 				<Header />
 				<div className="grid grid-cols-7 items-center">
 					<div className={isHomePage ? "hidden" : "col-span-1"}>
@@ -51,9 +49,8 @@ export default function RootLayout({
 						{children}
 					</motion.div>
 				</div>
-				{/* </AnimatePresence> */}
+
 				<Footer />
-				{/* </ThemeProvider> */}
 			</body>
 		</html>
 	);
