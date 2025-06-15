@@ -15,10 +15,10 @@ export default function Home() {
 		{ name: "QR Code Reader", href: "/qr-code-reader", icon: "📱" },
 		{ name: "QR Code Generator", href: "/qr-code-generator", icon: "📱" },
 		{ name: "JSON Beautifier", href: "/json-beautifier", icon: "📦" },
-		{ name: "VW to PX", href: "/vw-to-px", icon: "📏" },
+		{ name: "PX to VW", href: "/px-to-vw", icon: "📏" },
 		{ name: "Percentage to PX", href: "/percentage-to-px", icon: "💯" },
-		{ name: "REM to PX", href: "/rem-to-px", icon: "📐" },
-		{ name: "EM to PX", href: "/em-to-px", icon: "📊" },
+		{ name: "PX to REM", href: "/px-to-rem", icon: "📐" },
+		{ name: "PX to EM", href: "/px-to-em", icon: "📊" },
 		{ name: "RGB to HEX", href: "/rgb-to-hex", icon: "🎨" },
 		{ name: "URL Encoder/Decoder", href: "/url-converter", icon: "🔗" },
 
