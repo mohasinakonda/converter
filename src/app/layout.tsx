@@ -30,7 +30,8 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const pathname = usePathname();
-
+	const isHomePage = pathname === "/";
+	console.log("home", isHomePage);
 	return (
 		<html lang="en" className="dark" suppressHydrationWarning>
 			<body
@@ -38,14 +39,18 @@ export default function RootLayout({
 			>
 				{/* <ThemeProvider> */}
 				<Header />
-				<SideNav />
-				{/* <AnimatePresence mode="wait" initial={false}> */}
-				<motion.div
-					key={pathname}
-					className={`${pathname === "/" ? "" : "ml-64"} p-6`}
-				>
-					{children}
-				</motion.div>
+				<div className="grid grid-cols-7 items-center">
+					<div className={isHomePage ? "hidden" : "col-span-1"}>
+						<SideNav />
+					</div>
+					{/* <AnimatePresence mode="wait" initial={false}> */}
+					<motion.div
+						key={pathname}
+						className={`${isHomePage ? "col-span-7" : "col-span-6"} w-full `}
+					>
+						{children}
+					</motion.div>
+				</div>
 				{/* </AnimatePresence> */}
 				<Footer />
 				{/* </ThemeProvider> */}
