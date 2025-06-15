@@ -6,6 +6,7 @@ import {
 	CheckIcon,
 	InformationCircleIcon,
 } from "@heroicons/react/24/outline";
+import { Input } from "./ui/input";
 
 const VwToPxConverter = () => {
 	const [containerSize, setContainerSize] = useState("");
@@ -71,11 +72,10 @@ const VwToPxConverter = () => {
 					<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 						Enter Container Size (px)
 					</label>
-					<input
+					<Input
 						type="number"
 						value={containerSize}
 						onChange={handleContainerSizeChange}
-						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
 						placeholder="e.g., 1440 or 1728"
 						step="1"
 					/>
@@ -88,11 +88,10 @@ const VwToPxConverter = () => {
 					<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 						Enter Pixels Value
 					</label>
-					<input
+					<Input
 						type="number"
 						value={pxValue}
 						onChange={handlePxChange}
-						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
 						placeholder="Enter px value"
 					/>
 				</div>
@@ -102,12 +101,7 @@ const VwToPxConverter = () => {
 						Result in VW
 					</label>
 					<div className="relative">
-						<input
-							type="text"
-							readOnly
-							value={`${calculateVw()}vw`}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-						/>
+						<Input type="text" readOnly value={`${calculateVw()}vw`} />
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}

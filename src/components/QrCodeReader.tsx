@@ -6,6 +6,7 @@ import {
 	ArrowsRightLeftIcon,
 	ClipboardIcon,
 	CheckIcon,
+	ArrowUpTrayIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -118,7 +119,10 @@ const QrCodeReader = () => {
 					accept="image/*"
 					className="hidden"
 				/>
-				<div className="text-gray-500 dark:text-gray-400">
+				<div className="text-gray-500 dark:text-gray-400 flex flex-col justify-center items-center">
+					<span>
+						<ArrowUpTrayIcon className="w-10 h-10 text-gray-400 dark:text-gray-500 mb-3" />
+					</span>
 					<p className="mb-2">Drag and drop a QR code image here</p>
 					<p className="text-sm">or click to upload</p>
 				</div>

@@ -1,7 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpTrayIcon, ClipboardIcon, CheckIcon } from "@heroicons/react/24/outline";
+import {
+	ArrowUpTrayIcon,
+	ClipboardIcon,
+	CheckIcon,
+} from "@heroicons/react/24/outline";
 import { BrowserMultiFormatReader } from "@zxing/library";
 
 const BarcodeReader = () => {
@@ -11,7 +16,9 @@ const BarcodeReader = () => {
 	const [copied, setCopied] = useState(false);
 	const fileInputRef = useRef<HTMLInputElement>(null);
 
-	const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+	const handleFileUpload = async (
+		event: React.ChangeEvent<HTMLInputElement>,
+	) => {
 		const file = event.target.files?.[0];
 		if (!file) return;
 
@@ -39,14 +46,21 @@ const BarcodeReader = () => {
 					const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 					try {
 						const codeReader = new BrowserMultiFormatReader();
-						const luminanceSource = new (window as any).ZXing.HTMLCanvasElementLuminanceSource(canvas);
-						const binaryBitmap = new (window as any).ZXing.BinaryBitmap(new (window as any).ZXing.HybridBinarizer(luminanceSource));
+						const luminanceSource = new (
+							window as any
+						).ZXing.HTMLCanvasElementLuminanceSource(canvas);
+						const binaryBitmap = new (window as any).ZXing.BinaryBitmap(
+							new (window as any).ZXing.HybridBinarizer(luminanceSource),
+						);
 						const result = codeReader.decode(binaryBitmap);
 						setResult(result.getText());
 					} catch (err) {
 						try {
 							const codeReader = new BrowserMultiFormatReader();
-							const result = await codeReader.decodeFromImage(undefined, imageUrl);
+							const result = await codeReader.decodeFromImage(
+								undefined,
+								imageUrl,
+							);
 							setResult(result.getText());
 						} catch (err2) {
 							setError("Could not read barcode from image");
@@ -110,7 +124,9 @@ const BarcodeReader = () => {
 				)}
 
 				{error && (
-					<div className="text-center text-red-500 dark:text-red-400">{error}</div>
+					<div className="text-center text-red-500 dark:text-red-400">
+						{error}
+					</div>
 				)}
 
 				{result && (
@@ -119,7 +135,9 @@ const BarcodeReader = () => {
 							Result
 						</h3>
 						<div className="flex items-center justify-between">
-							<p className="text-gray-800 dark:text-white break-all mr-2">{result}</p>
+							<p className="text-gray-800 dark:text-white break-all mr-2">
+								{result}
+							</p>
 							<motion.button
 								whileHover={{ scale: 1.05 }}
 								whileTap={{ scale: 0.95 }}

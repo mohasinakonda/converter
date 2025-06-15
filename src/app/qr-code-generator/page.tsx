@@ -4,6 +4,7 @@ import { useState } from "react";
 import QRCode from "qrcode";
 import Link from "next/link";
 import { ArrowsRightLeftIcon } from "@heroicons/react/24/outline";
+import { Input } from "@/components/ui/input";
 const QRCodeGenerator = () => {
 	const [inputText, setInputText] = useState("");
 	const [qrCodeDataUrl, setQrCodeDataUrl] = useState("");
@@ -35,7 +36,7 @@ const QRCodeGenerator = () => {
 		<motion.div
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
-			className="w-full max-w-3xl p-6 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
+			className="w-full max-w-3xl mx-auto p-6 bg-white rounded-2xl shadow-lg dark:bg-gray-800"
 		>
 			<div className="flex justify-between items-center mb-6">
 				<h2 className="text-2xl font-bold text-gray-800 dark:text-white">
@@ -55,11 +56,10 @@ const QRCodeGenerator = () => {
 						<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 							QR Code Title
 						</label>
-						<input
+						<Input
 							type="text"
 							value={qrTitle}
 							onChange={(e) => setQrTitle(e.target.value)}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
 							placeholder="Enter QR code title"
 						/>
 					</div>
@@ -67,11 +67,10 @@ const QRCodeGenerator = () => {
 						<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 							Description
 						</label>
-						<input
+						<Input
 							type="text"
 							value={qrDescription}
 							onChange={(e) => setQrDescription(e.target.value)}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
 							placeholder="Enter description"
 						/>
 					</div>
@@ -83,7 +82,7 @@ const QRCodeGenerator = () => {
 						<textarea
 							value={inputText}
 							onChange={handleInputChange}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white min-h-[100px]"
+							className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white text-gray-700 min-h-[100px]"
 							placeholder="Enter text to generate QR code"
 						/>
 					</div>

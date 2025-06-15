@@ -6,6 +6,7 @@ import {
 	CheckIcon,
 	ArrowsRightLeftIcon,
 } from "@heroicons/react/24/outline";
+import { Input } from "./ui/input";
 
 const UrlConverter = () => {
 	const [value, setValue] = useState("");
@@ -59,11 +60,10 @@ const UrlConverter = () => {
 					<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
 						Enter URL to {isEncoding ? "Encode" : "Decode"}
 					</label>
-					<input
+					<Input
 						type="text"
 						value={value}
 						onChange={(e) => setValue(e.target.value)}
-						className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600 dark:text-white"
 						placeholder={`Enter URL to ${isEncoding ? "encode" : "decode"}`}
 					/>
 				</div>
@@ -73,12 +73,7 @@ const UrlConverter = () => {
 						{isEncoding ? "Encoded" : "Decoded"} Result
 					</label>
 					<div className="relative">
-						<input
-							type="text"
-							readOnly
-							value={convert()}
-							className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
-						/>
+						<Input type="text" readOnly value={convert()} />
 						<motion.button
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
