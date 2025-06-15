@@ -1,6 +1,15 @@
-import Image from "next/image";
+import { Metadata } from "next";
 import Link from "next/link";
-
+export const metadata: Metadata = {
+	title: "Unit Converters",
+	description:
+		"Simple and powerful conversion tools for developers and designers",
+	keywords:
+		"unit converter,unit converter app,unit converter tool,unit converter website,unit converter for free,unit converter for business,unit converter for personal use,unit converter tool online,unit converter website online,unit converter tool for free,unit converter website for free,unit converter tool for business,unit converter website for business,unit converter tool for personal use,unit converter",
+	verification: {
+		google: "google052d21b235c32c81.html",
+	},
+};
 export default function Home() {
 	const converters = [
 		{ name: "QR Code Reader", href: "/qr-code-reader", icon: "📱" },
