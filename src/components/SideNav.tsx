@@ -28,7 +28,7 @@ const SideNav = () => {
 			initial={{ x: -100, opacity: 0 }}
 			animate={{ x: 0, opacity: 1 }}
 			exit={{ x: -100, opacity: 0 }}
-			className="fixed left-0 top-16 h-[calc(100vh-4rem)] w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 p-4 overflow-y-auto"
+			className="sticky left-0 top-16 h-[calc(100vh)] w-64 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 p-4 overflow-y-auto"
 		>
 			<nav className="space-y-2">
 				{navItems.map((item) => {
