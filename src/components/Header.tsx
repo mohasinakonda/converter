@@ -46,6 +46,7 @@ const Header = () => {
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}
 						onClick={toggleDarkMode}
+						aria-label="Toggle dark mode"
 						className="p-2 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
 					>
 						{isDarkMode ? (
