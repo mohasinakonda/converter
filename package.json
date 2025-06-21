@@ -15,6 +15,7 @@
     "framer-motion": "^12.11.3",
     "jspdf": "^3.0.1",
     "next": "15.3.2",
+    "next-sitemap": "^4.2.3",
     "qrcode": "^1.5.4",
     "react": "^19.0.0",
     "react-barcode-reader": "^0.0.2",
