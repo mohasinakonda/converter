@@ -41,6 +41,10 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Security Update
+
+We have upgraded to Next.js **15.4.8** to address CVE‑2025‑66478, a critical remote code execution vulnerability in the React Server Components protocol. Please ensure you keep dependencies up‑to‑date.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
