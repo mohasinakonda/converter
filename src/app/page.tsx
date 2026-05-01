@@ -62,13 +62,13 @@ export default function Home() {
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
 			/>
-			<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
-				<main className="max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+			<div className="min-h-screen bg-gradient-to-br from-indigo-100 to-purple-100 dark:from-gray-900 dark:to-gray-800">
+				<main className="max-w-5xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
 					<div className="text-center mb-16">
-						<h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-[family-name:var(--font-geist-sans)]">
+						<h1 className="text-5xl sm:text-6xl font-extrabold text-gray-900 dark:text-white mb-6 font-[family-name:var(--font-geist-sans)]"
 							Unit Converters
 						</h1>
-						<p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+						<p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8"
 							Simple and powerful conversion tools for developers and designers
 						</p>
 					</div>
@@ -78,11 +78,11 @@ export default function Home() {
 							<Link
 								key={converter.href}
 								href={converter.href}
-								className="group relative overflow-hidden bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+								className="group relative overflow-hidden bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
 							>
-								<div className="p-8">
+								<div className="p-10">
 									<div className="flex items-center justify-between mb-4">
-										<span className="text-4xl">{converter.icon}</span>
+										<span className="text-5xl">{converter.icon}</span>
 										<div className="h-8 w-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center group-hover:bg-blue-500 dark:group-hover:bg-blue-600 transition-colors duration-300">
 											<svg
 												className="w-5 h-5 text-gray-500 group-hover:text-white dark:text-gray-400 dark:group-hover:text-white transition-colors duration-300"
@@ -99,7 +99,7 @@ export default function Home() {
 											</svg>
 										</div>
 									</div>
-									<h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-blue-500 dark:group-hover:text-blue-400 transition-colors duration-300">
+									<h2 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
 										{converter.name}
 									</h2>
 									<div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
